@@ -9,12 +9,12 @@ chai.use(chaiAsPromised);
 var expect = chai.expect;
 
 defineSupportCode(function({Given, When, Then}) {
-  Given('I go to {stringInDoubleQuotes}', function (site, next) {
+  Given('I go to {string}', function (site, next) {
     angularPage.go(site);
     expect(browser.getTitle()).to.eventually.equal('AngularJS — Superheroic JavaScript MVW Framework').and.notify(next);
   });
        
-  When('I add {stringInDoubleQuotes} in the task field', function (task, next) {
+  When('I add {string} in the task field', function (task, next) {
     angularPage.addTask(task);
     next();
   });

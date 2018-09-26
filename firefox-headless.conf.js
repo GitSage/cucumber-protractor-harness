@@ -7,10 +7,13 @@ exports.config = {
   // path relative to the current config file
   frameworkPath: require.resolve('protractor-cucumber-framework'),
   capabilities: {
-    browserName: 'chrome',
-    'chromeOptions': {
-      args: ['--no-sandbox']
-    }
+	  browserName: 'firefox',
+	  firefoxOptions: {
+		  args: ['--headless']
+	  },
+	  'moz:firefoxOptions': {
+		  args: [ '--headless' ]
+	  }
   },
 
   // Spec patterns are relative to this directory.
@@ -23,7 +26,7 @@ exports.config = {
   cucumberOpts: {
     require: 'features/step_definitions/*.js',
     tags: false,
-	format: 'node_modules/cucumber-pretty',
+    format: 'node_modules/cucumber-pretty',
     profile: false,
     'no-source': true
   }

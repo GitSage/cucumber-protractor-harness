@@ -4,6 +4,7 @@
   "description": "package for a cucumber-protractor harness",
   "main": "cucumber.conf.js",
   "dependencies": {
+    "cucumber-pretty": "^1.4.4",
     "xvfb": "^0.2.3"
   },
   "devDependencies": {
